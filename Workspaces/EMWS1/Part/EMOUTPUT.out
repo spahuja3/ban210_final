@@ -1,0 +1,73 @@
+*------------------------------------------------------------*
+User:                manas
+Date:                April 16, 2022
+Time:                02:20:51 o'clock
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+INPUT      BINARY            3
+INPUT      INTERVAL          4
+INPUT      NOMINAL           5
+TARGET     BINARY            1
+ 
+ 
+ 
+ 
+Partition Summary
+ 
+                                     Number of
+Type             Data Set          Observations
+ 
+DATA        EMWS1.Ids_DATA              286
+TRAIN       EMWS1.Part_TRAIN            227
+VALIDATE    EMWS1.Part_VALIDATE          59
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Summary Statistics for Class Targets
+ 
+Data=DATA
+ 
+            Numeric                            Frequency
+Variable     Value       Formatted Value         Count      Percent    Label
+ 
+ class         .       no-recurrence-events       201       70.2797    class
+ class         .       recurrence-events           85       29.7203    class
+ 
+ 
+Data=TRAIN
+ 
+            Numeric                            Frequency
+Variable     Value       Formatted Value         Count      Percent    Label
+ 
+ class         .       no-recurrence-events       160       70.4846    class
+ class         .       recurrence-events           67       29.5154    class
+ 
+ 
+Data=VALIDATE
+ 
+            Numeric                            Frequency
+Variable     Value       Formatted Value         Count      Percent    Label
+ 
+ class         .       no-recurrence-events        41       69.4915    class
+ class         .       recurrence-events           18       30.5085    class

@@ -1,0 +1,102 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "April 16, 2022" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "01:56:35 o'clock" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Score Log";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Score Log
+Date:                April 16, 2022
+Time:                01:56:35 o'clock
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O0EV02OM "D:\\127097210_Pahuja\Workspaces\EMWS1\Ids\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O0EV02OM new;
+MPRINT(EM_DIAGRAM):   run;
+21581      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+21582      * Ids: Computing metadata for DATA data;
+MPRINT(EM_DIAGRAM):   * Ids: Computing metadata for DATA data;
+21583      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+NOTE: View EMWS1.IDS_DATA.VIEW used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.06 seconds
+      
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+21584      data EMWS1.Ids_EMINFO;
+MPRINT(EM_DIAGRAM):    data EMWS1.Ids_EMINFO;
+21585      length TARGET KEY $32 DATA $43;
+MPRINT(EM_DIAGRAM):   length TARGET KEY $32 DATA $43;
+21586      TARGET="";
+MPRINT(EM_DIAGRAM):   TARGET="";
+21587      KEY="IDSTABLE";
+MPRINT(EM_DIAGRAM):   KEY="IDSTABLE";
+21588      DATA="BAN210.EBREASTCANCER";
+MPRINT(EM_DIAGRAM):   DATA="BAN210.EBREASTCANCER";
+21589      output;
+MPRINT(EM_DIAGRAM):   output;
+21590      TARGET="class";
+MPRINT(EM_DIAGRAM):   TARGET="class";
+21591      KEY="DECDATA";
+MPRINT(EM_DIAGRAM):   KEY="DECDATA";
+21592      DATA="EMWS1.Ids_class_DD";
+MPRINT(EM_DIAGRAM):   DATA="EMWS1.Ids_class_DD";
+21593      output;
+MPRINT(EM_DIAGRAM):   output;
+21594      TARGET="class";
+MPRINT(EM_DIAGRAM):   TARGET="class";
+21595      KEY="DECMETA";
+MPRINT(EM_DIAGRAM):   KEY="DECMETA";
+21596      DATA="EMWS1.Ids_class_DM";
+MPRINT(EM_DIAGRAM):   DATA="EMWS1.Ids_class_DM";
+21597      output;
+MPRINT(EM_DIAGRAM):   output;
+21598      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set EMWS1.IDS_EMINFO has 3 observations and 3 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+NOTE: View EMWS1.IDS_DATA.VIEW used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+21599      data EMWS1.Ids_CMeta_DATA;
+MPRINT(EM_DIAGRAM):    data EMWS1.Ids_CMeta_DATA;
+21600      set EMWS1.Ids_VariableSet;
+MPRINT(EM_DIAGRAM):   set EMWS1.Ids_VariableSet;
+21601      drop DROP;
+MPRINT(EM_DIAGRAM):   drop DROP;
+21602      where DROP='N';
+MPRINT(EM_DIAGRAM):   where DROP='N';
+21603      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set EMWS1.IDS_VARIABLESET.
+      WHERE DROP='N';
+NOTE: The data set EMWS1.IDS_CMETA_DATA has 13 observations and 20 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

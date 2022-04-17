@@ -1,0 +1,236 @@
+*------------------------------------------------------------*
+User:                manas
+Date:                April 16, 2022
+Time:                02:17:04 o'clock
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+INPUT       BINARY           3
+INPUT       NOMINAL          5
+INPUT       ORDINAL          4
+TARGET      BINARY           1
+ 
+ 
+ 
+Variable Levels Summary
+(maximum 500 observations printed)
+ 
+                      Frequency
+Variable     Role       Count
+ 
+ class      TARGET        2
+ 
+ 
+ 
+Class Variable Summary Statistics
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN
+ 
+                                        Number
+Data                                      of                                            Mode                              Mode2
+Role     Variable Name         Role     Levels    Missing    Mode                    Percentage    Mode2                Percentage
+ 
+TRAIN    AvgAge               INPUT        6         0       55                        33.57       45                     31.47
+TRAIN    AvgTumorSize         INPUT       11         0       32                        20.98       27                     18.88
+TRAIN    Avginv_node_group    INPUT        6         0       1                         74.48       2                      12.59
+TRAIN    age                  INPUT        6         0       50-59                     33.57       40-49                  31.47
+TRAIN    breast               INPUT        2         0       left                      53.15       right                  46.85
+TRAIN    breast_quad          INPUT        6         1       left_low                  38.46       left_up                33.92
+TRAIN    deg_malig            INPUT        3         0       2                         45.45       3                      29.72
+TRAIN    inv_nodes            INPUT        7         0       0-2                       74.48       3-5                    12.59
+TRAIN    irradiat             INPUT        2         0       no                        76.22       yes                    23.78
+TRAIN    menopause            INPUT        3         0       premeno                   52.45       ge40                   45.10
+TRAIN    node_caps            INPUT        3         8       no                        77.62       yes                    19.58
+TRAIN    tumor_size           INPUT       11         0       30-34                     20.98       25-29                  18.88
+TRAIN    class                TARGET       2         0       no-recurrence-events      70.28       recurrence-events      29.72
+ 
+ 
+ 
+Distribution of Class Target and Segment Variables
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN
+ 
+Data     Variable                                       Frequency
+Role       Name       Role            Level                 Count    Percent
+ 
+TRAIN     class      TARGET    no-recurrence-events           201    70.2797
+TRAIN     class      TARGET    recurrence-events               85    29.7203
+ 
+ 
+ 
+Class Variable Summary Statistics by Class Target
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN Variable Name=AvgAge
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                               6         0        55       33.57        45        31.47
+class        no-recurrence-events       6         0        55       35.32        45        31.34
+class        recurrence-events          5         0        45       31.76        55        29.41
+ 
+ 
+Data Role=TRAIN Variable Name=AvgTumorSize
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                              11         0        32       20.98        27        18.88
+class        no-recurrence-events      11         0        27       17.91        32        17.41
+class        recurrence-events         10         0        32       29.41        27        21.18
+ 
+ 
+Data Role=TRAIN Variable Name=Avginv_node_group
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                               6         0        1        74.48         2        12.59
+class        no-recurrence-events       6         0        1        83.08         2         9.45
+class        recurrence-events          6         0        1        54.12         2        20.00
+ 
+ 
+Data Role=TRAIN Variable Name=age
+ 
+                                     Number
+                                       of                             Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode     Percentage    Mode2    Percentage
+ 
+_OVERALL_                               6         0       50-59      33.57       40-49      31.47
+class        no-recurrence-events       6         0       50-59      35.32       40-49      31.34
+class        recurrence-events          5         0       40-49      31.76       50-59      29.41
+ 
+ 
+Data Role=TRAIN Variable Name=breast
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                               2         0       left      53.15       right      46.85
+class        no-recurrence-events       2         0       left      51.24       right      48.76
+class        recurrence-events          2         0       left      57.65       right      42.35
+ 
+ 
+Data Role=TRAIN Variable Name=breast_quad
+ 
+                                     Number
+                                       of                                Mode                    Mode2
+Target           Target Level        Levels    Missing      Mode      Percentage     Mode2     Percentage
+ 
+_OVERALL_                               6         1       left_low      38.46       left_up      33.92
+class        no-recurrence-events       5         0       left_low      37.31       left_up      35.32
+class        recurrence-events          6         1       left_low      41.18       left_up      30.59
+ 
+ 
+Data Role=TRAIN Variable Name=deg_malig
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                               3         0        2        45.45         3        29.72
+class        no-recurrence-events       3         0        2        50.75         1        29.35
+class        recurrence-events          3         0        3        52.94         2        32.94
+ 
+ 
+Data Role=TRAIN Variable Name=inv_nodes
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                               7         0       0-2       74.48        3-5       12.59
+class        no-recurrence-events       6         0       0-2       83.08        3-5        9.45
+class        recurrence-events          7         0       0-2       54.12        3-5       20.00
+ 
+ 
+Data Role=TRAIN Variable Name=irradiat
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                               2         0        no       76.22        yes       23.78
+class        no-recurrence-events       2         0        no       81.59        yes       18.41
+class        recurrence-events          2         0        no       63.53        yes       36.47
+ 
+ 
+Data Role=TRAIN Variable Name=menopause
+ 
+                                     Number
+                                       of                               Mode                  Mode2
+Target           Target Level        Levels    Missing     Mode      Percentage    Mode2    Percentage
+ 
+_OVERALL_                               3         0       premeno      52.45       ge40       45.10
+class        no-recurrence-events       3         0       premeno      50.75       ge40       46.77
+class        recurrence-events          3         0       premeno      56.47       ge40       41.18
+ 
+ 
+Data Role=TRAIN Variable Name=node_caps
+ 
+                                     Number
+                                       of                            Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode    Percentage    Mode2    Percentage
+ 
+_OVERALL_                               3         8        no       77.62        yes       19.58
+class        no-recurrence-events       3         5        no       85.07        yes       12.44
+class        recurrence-events          3         3        no       60.00        yes       36.47
+ 
+ 
+Data Role=TRAIN Variable Name=tumor_size
+ 
+                                     Number
+                                       of                             Mode                  Mode2
+Target           Target Level        Levels    Missing    Mode     Percentage    Mode2    Percentage
+ 
+_OVERALL_                              11         0       30-34      20.98       25-29      18.88
+class        no-recurrence-events      11         0       25-29      17.91       30-34      17.41
+class        recurrence-events         10         0       30-34      29.41       25-29      21.18
+ 
+ 
+ 
+Chi-Square Statistics
+(maximum 500 observations printed)
+ 
+Data Role=TRAIN Target=class
+ 
+Input                Chi-Square    Df      Prob
+ 
+deg_malig               31.6950     2    <.0001
+inv_nodes               28.7997     6    <.0001
+Avginv_node_group       28.0331     5    <.0001
+node_caps               22.6917     2    <.0001
+AvgTumorSize            17.9157    10    0.0564
+tumor_size              17.9157    10    0.0564
+irradiat                10.7542     1    0.0010
+breast_quad              5.8711     5    0.3190
+AvgAge                   3.9977     5    0.5497
+age                      3.9977     5    0.5497
+breast                   0.9836     1    0.3213
+menopause                0.7915     2    0.6732
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

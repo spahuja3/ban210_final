@@ -1,0 +1,22 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+Imputation Summary
+Number Of Observations
+
+                                                                                        Number of
+Variable     Impute       Imputed       Impute             Measurement                    Missing
+  Name       Method      Variable       Value     Role        Level         Label       for TRAIN
+
+node_caps    COUNT     IMP_node_caps      no      INPUT      BINARY       node_caps             6
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Distribution Training Data
+
+        Number of
+          Missing    Number of    Percent of
+Obs     for TRAIN    Variables     Variables
+
+ 1              6        1            100   

@@ -1,0 +1,122 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if Avginv_node_group >= 11.5
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 8
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 1.00
+ 
+*------------------------------------------------------------*
+ Node = 7
+*------------------------------------------------------------*
+if irradiat IS ONE OF: YES
+AND Imputed: node_caps IS ONE OF: NO or MISSING
+AND Avginv_node_group < 11.5 or MISSING
+then 
+ Tree Node Identifier   = 7
+ Number of Observations = 31
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=5  = 0.03
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=3  = 0.97
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if Imputed: node_caps IS ONE OF: YES
+AND Avginv_node_group < 11.5 or MISSING
+AND AvgTumorSize < 34.5 or MISSING
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 24
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.29
+ Predicted: _SEGMENT_=6  = 0.71
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 9
+*------------------------------------------------------------*
+if Imputed: node_caps IS ONE OF: YES
+AND Avginv_node_group < 11.5 or MISSING
+AND AvgTumorSize >= 34.5
+then 
+ Tree Node Identifier   = 9
+ Number of Observations = 12
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=5  = 0.00
+ Predicted: _SEGMENT_=1  = 0.58
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=7  = 0.42
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 11
+*------------------------------------------------------------*
+if irradiat IS ONE OF: NO or MISSING
+AND Imputed: node_caps IS ONE OF: NO or MISSING
+AND Avginv_node_group < 11.5 or MISSING
+AND AvgTumorSize >= 24.5
+then 
+ Tree Node Identifier   = 11
+ Number of Observations = 75
+ Predicted: _SEGMENT_=4  = 0.92
+ Predicted: _SEGMENT_=5  = 0.08
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 12
+*------------------------------------------------------------*
+if irradiat IS ONE OF: NO or MISSING
+AND deg_malig < 2.5 or MISSING
+AND Imputed: node_caps IS ONE OF: NO or MISSING
+AND Avginv_node_group < 11.5 or MISSING
+AND AvgTumorSize < 24.5 or MISSING
+then 
+ Tree Node Identifier   = 12
+ Number of Observations = 67
+ Predicted: _SEGMENT_=4  = 0.00
+ Predicted: _SEGMENT_=5  = 1.00
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 13
+*------------------------------------------------------------*
+if irradiat IS ONE OF: NO or MISSING
+AND deg_malig >= 2.5
+AND Imputed: node_caps IS ONE OF: NO or MISSING
+AND Avginv_node_group < 11.5 or MISSING
+AND AvgTumorSize < 24.5 or MISSING
+then 
+ Tree Node Identifier   = 13
+ Number of Observations = 10
+ Predicted: _SEGMENT_=4  = 0.90
+ Predicted: _SEGMENT_=5  = 0.10
+ Predicted: _SEGMENT_=1  = 0.00
+ Predicted: _SEGMENT_=6  = 0.00
+ Predicted: _SEGMENT_=7  = 0.00
+ Predicted: _SEGMENT_=3  = 0.00
+ Predicted: _SEGMENT_=2  = 0.00
+ 

@@ -1,0 +1,15 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Importance
+
+                                           Number of    Number of
+                                           Splitting    Surrogate
+Variable Name        Label                   Rules        Rules      Importance
+
+Avginv_node_group    Avginv_node_group         1            4          1.00000 
+AvgTumorSize         AvgTumorSize              2            0          0.77947 
+deg_malig            deg_malig                 1            2          0.72499 
+irradiat             irradiat                  1            0          0.63196 
+IMP_node_caps        Imputed: node_caps        1            0          0.50542 

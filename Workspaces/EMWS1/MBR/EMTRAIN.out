@@ -1,0 +1,53 @@
+ 
+                                                                                               
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+Role         Level         Count
+
+ID         INTERVAL          1    
+INPUT      INTERVAL          4    
+TARGET     BINARY            1    
+ 
+                                                                                               
+ 
+ 
+Model Events
+
+                                              Number
+                               Measurement      of
+Target          Event             Level       Levels      Order       Label
+
+class     RECURRENCE-EVENTS      BINARY          2      Descending    class
+ 
+                                                                                               
+ 
+ 
+Decision Matrix
+
+                          Training     RECURRENCE-    NO-RECURRENCE-
+       class            Proportions       EVENTS          EVENTS
+
+RECURRENCE-EVENTS         0.29720           1                0      
+NO-RECURRENCE-EVENTS      0.70280           0                1      
+ 
+                                                                                               
+ 
+ 
+Predicted and decision variables
+
+Type              Variable                       Label
+
+TARGET            class                          class                                
+PREDICTED         P_classrecurrence_events       Predicted: class=recurrence-events   
+RESIDUAL          R_classrecurrence_events       Residual: class=recurrence-events    
+PREDICTED         P_classno_recurrence_events    Predicted: class=no-recurrence-events
+RESIDUAL          R_classno_recurrence_events    Residual: class=no-recurrence-events 
+FROM              F_class                        From: class                          
+INTO              I_class                        Into: class                          
+MODELDECISION     D_class                        Decision: class                      
+EXPECTEDPROFIT    EP_CLASS                       Expected Profit: class               
+COMPUTEDPROFIT    CP_CLASS                       Computed Profit: class               
+BESTPROFIT        BP_CLASS                       Best Profit: class                   

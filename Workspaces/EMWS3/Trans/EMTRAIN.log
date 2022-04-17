@@ -1,0 +1,369 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "April 16, 2022" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "02:30:33 o'clock" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Training Log";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Training Log
+Date:                April 16, 2022
+Time:                02:30:33 o'clock
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O3AB59AH "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O3AB59AH new;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOG "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMLOG.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "April 16, 2022" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "02:30:33 o'clock" );
+MPRINT(EM_DIAGRAM):   file _LOG;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "User:                manas";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "Site:                70192439";
+MPRINT(EM_DIAGRAM):   put "Platform:            X64_8HOME";
+MPRINT(EM_DIAGRAM):   put "Maintenance Release: 9.04.01M3P062415";
+MPRINT(EM_DIAGRAM):   put "EM Version:          14.1";
+MPRINT(EM_DIAGRAM):   put "* ";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMTRAIN.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _LOG MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_LOGIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   filename _LOGIN "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMSCORE.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMREPORT.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    filename _LOG;
+MPRINT(EM_DIAGRAM):    filename _OUT "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMOUTPUT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "April 16, 2022" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "02:30:33 o'clock" );
+MPRINT(EM_DIAGRAM):   file _OUT;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "User:                manas";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Training Output";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   ;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _OUT MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_OUTIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Score Output";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Report Output";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    filename _OUT;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'D:\\127097210_Pahuja\Workspaces\EMWS3\Trans\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+26933      proc freq data=EMWS3.Trans_VariableSet noprint;
+MPRINT(EM_DIAGRAM):    proc freq data=EMWS3.Trans_VariableSet noprint;
+26934      table ROLE*LEVEL/out=WORK.TransMETA;
+MPRINT(EM_DIAGRAM):   table ROLE*LEVEL/out=WORK.TransMETA;
+26935      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set EMWS3.TRANS_VARIABLESET.
+NOTE: The data set WORK.TRANSMETA has 3 observations and 4 variables.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.00 seconds
+      
+
+26936      proc print data=WORK.TransMETA label noobs;
+MPRINT(EM_DIAGRAM):   proc print data=WORK.TransMETA label noobs;
+26937      var ROLE LEVEL COUNT;
+MPRINT(EM_DIAGRAM):   var ROLE LEVEL COUNT;
+26938      label ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel, NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel, NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label ROLE = "Role" LEVEL = "Measurement Level" COUNT = "Frequency Count";
+26939      title9 ' ';
+MPRINT(EM_DIAGRAM):   title9 ' ';
+26940      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_varSummary_title  , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "Variable Summary";
+MPRINT(EM_DIAGRAM):   run;
+26941      run;
+
+NOTE: There were 3 observations read from the data set WORK.TRANSMETA.
+NOTE: The PROCEDURE PRINT printed page 4.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.04 seconds
+      
+
+26942      title10;
+MPRINT(EM_DIAGRAM):   title10;
+26943      data WORK.M0YS5LNF;
+MPRINT(EM_DIAGRAM):    data WORK.M0YS5LNF;
+26944      set WORK.M0YS5LNF;
+MPRINT(EM_DIAGRAM):   set WORK.M0YS5LNF;
+26945      if (METHOD='NONE' and ROLE ne 'FREQ') or (role = 'REJECTED' and METHOD = 'DEFAULT') then delete;
+MPRINT(EM_DIAGRAM):   if (METHOD='NONE' and ROLE ne 'FREQ') or (role = 'REJECTED' and METHOD = 'DEFAULT') then delete;
+26946      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set WORK.M0YS5LNF.
+NOTE: The data set WORK.M0YS5LNF has 13 observations and 22 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(EM_DIAGRAM):   reset noprint;
+MPRINT(EM_DIAGRAM):   select count(*) into :_tmpnobs from EMWS3.Ids2_DATA;
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+NOTE: View EMWS3.IDS2_DATA.VIEW used (Total process time):
+      real time           0.03 seconds
+      cpu time            0.03 seconds
+      
+NOTE: There were 286 observations read from the data set BAN210.EBREASTCANCER.
+MPRINT(EM_DIAGRAM):   quit;
+27011      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):     *------------------------------------------------------------*;
+27012      * Trans: Computing Summary Statistics;
+MPRINT(EM_DIAGRAM):   * Trans: Computing Summary Statistics;
+27013      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+27014      data WORK.M17ETNXM;
+MPRINT(EM_DIAGRAM):   data WORK.M17ETNXM;
+27015      set WORK.M17ETNXM;
+MPRINT(EM_DIAGRAM):   set WORK.M17ETNXM;
+27016      if (role = 'REJECTED') then role = 'INPUT';
+MPRINT(EM_DIAGRAM):   if (role = 'REJECTED') then role = 'INPUT';
+27017      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set WORK.M17ETNXM.
+NOTE: The data set WORK.M17ETNXM has 13 observations and 22 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+27018      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------* ;
+27019      * EM: DMDBClass Macro ;
+MPRINT(EM_DIAGRAM):   * EM: DMDBClass Macro ;
+27020      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+27021      %macro DMDBClass;
+27022          age(ASC) breast(ASC) breast_quad(ASC) class(DESC) inv_nodes(ASC) irradiat(ASC)
+27023         menopause(ASC) node_caps(ASC) tumor_size(ASC)
+27024      %mend DMDBClass;
+27025      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+27026      * EM: DMDBVar Macro ;
+MPRINT(EM_DIAGRAM):   * EM: DMDBVar Macro ;
+27027      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+27028      %macro DMDBVar;
+27029          AvgAge AvgTumorSize Avginv_node_group deg_malig
+27030      %mend DMDBVar;
+27031      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+27032      * EM: Create DMDB;
+MPRINT(EM_DIAGRAM):   * EM: Create DMDB;
+27033      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+27034      proc dmdb batch data=EMWS3.Ids2_DATA
+27035      dmdbcat=WORK.EM_DMDB
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+27036      classout=WORK.Transclassout
+27037      maxlevel = 513
+27038      ;
+MPRINT(EM_DIAGRAM):   proc dmdb batch data=EMWS3.Ids2_DATA dmdbcat=WORK.EM_DMDB classout=WORK.Transclassout maxlevel = 513 ;
+MPRINT(EM_DIAGRAM):   class
+27039      class %DMDBClass;
+MPRINT(DMDBCLASS):   age(ASC) breast(ASC) breast_quad(ASC) class(DESC) inv_nodes(ASC) irradiat(ASC) menopause(ASC) node_caps(ASC) tumor_size(ASC)
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   var
+27040      var %DMDBVar;
+MPRINT(DMDBVAR):   AvgAge AvgTumorSize Avginv_node_group deg_malig
+MPRINT(EM_DIAGRAM):  ;
+27041      target
+27042      class
+27043      ;
+MPRINT(EM_DIAGRAM):   target class ;
+27044      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Records processed = 286   Memory used = 511K.
+NOTE: View EMWS3.IDS2_DATA.VIEW used (Total process time):
+      real time           0.03 seconds
+      cpu time            0.01 seconds
+      
+NOTE: There were 286 observations read from the data set BAN210.EBREASTCANCER.
+NOTE: There were 286 observations read from the data set EMWS3.IDS2_DATA.
+NOTE: The data set WORK.TRANSCLASSOUT has 42 observations and 9 variables.
+NOTE: PROCEDURE DMDB used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+MPRINT(EM_DIAGRAM):   *--- end code ---*;
+27045      quit;
+27046      *--- end code ---*;
+
+27047      data WORK.TransINTERVALMETA;
+MPRINT(EM_DIAGRAM):    data WORK.TransINTERVALMETA;
+27048      set WORK.M0YS5LNF;
+MPRINT(EM_DIAGRAM):   set WORK.M0YS5LNF;
+27049      if LEVEL ne 'INTERVAL' then delete;
+MPRINT(EM_DIAGRAM):   if LEVEL ne 'INTERVAL' then delete;
+27050      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set WORK.M0YS5LNF.
+NOTE: The data set WORK.TRANSINTERVALMETA has 4 observations and 22 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+27051      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+27052      * Trans: Determining Variables to Scale;
+MPRINT(EM_DIAGRAM):   * Trans: Determining Variables to Scale;
+27053      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+27054      data WORK.M3X52F8K;
+MPRINT(EM_DIAGRAM):   data WORK.M3X52F8K;
+27055      set WORK.M3X52F8K;
+MPRINT(EM_DIAGRAM):   set WORK.M3X52F8K;
+27056      where (TYPE="N" and (METHOD in("MAX_NORM", "MAX_CORR", "EQUALIZE", "OP_MAX_NORM", "OP_EQUALIZE"))) or (ROLE eq "FREQ");
+MPRINT(EM_DIAGRAM):   where (TYPE="N" and (METHOD in("MAX_NORM", "MAX_CORR", "EQUALIZE", "OP_MAX_NORM", "OP_EQUALIZE"))) or (ROLE eq "FREQ");
+27057      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 0 observations read from the data set WORK.M3X52F8K.
+      WHERE ((TYPE='N') and METHOD in ('EQUALIZE', 'MAX_CORR', 'MAX_NORM', 'OP_EQUALIZE', 'OP_MAX_NORM')) or (ROLE='FREQ');
+NOTE: The data set WORK.M3X52F8K has 0 observations and 22 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+NOTE: View EMWS3.IDS2_DATA.VIEW used (Total process time):
+      real time           0.46 seconds
+      cpu time            0.28 seconds
+      
+27060      %exploreSample(DATA=EMWS3.Ids2_DATA, OUTPUT=EMWS3.Trans_SAMPLE_DATA, METADATA=EMWS3.Ids2_CMeta_DATA, VARS=, METHOD=FIRSTN, SIZE=DEFAULT, ALPHA=0.01, PVALUE=0.01, SEED=12345);
+MPRINT(EM_DIAGRAM):     
+MPRINT(EXPLORESAMPLE):   filename x catalog 'sashelp.emutil.exploreobs.source';
+MPRINT(EXPLORESAMPLE):   filename x;
+NOTE: Fileref X has been deassigned.
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+NOTE: EXPLOREOBS EMWS3.Ids2_DATA : vars= 13 : recl= 94 : max=60000 : def= 6000
+MPRINT(EXPLORESAMPLE):   ;
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+MPRINT(HPDM_PERFORMANCE):  ;
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+PERFORMANCE  DETAILS
+MPRINT(EXPLORESAMPLE):  ;
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+*------------------------------------------------------------*
+* FirstN/Top sample
+*------------------------------------------------------------*
+MPRINT(EXPLORESAMPLE):   data EMWS3.Trans_SAMPLE_DATA;
+MPRINT(EXPLORESAMPLE):   set EMWS3.Ids2_DATA(obs= 6000 );
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+MPRINT(EXPLORESAMPLE):   run;
+
+NOTE: View EMWS3.IDS2_DATA.VIEW used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+NOTE: There were 286 observations read from the data set BAN210.EBREASTCANCER.
+NOTE: There were 286 observations read from the data set EMWS3.IDS2_DATA.
+NOTE: The data set EMWS3.TRANS_SAMPLE_DATA has 286 observations and 13 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.03 seconds
+      
+
+MPRINT(EM_DIAGRAM):  ;
+
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

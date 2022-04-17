@@ -1,0 +1,10 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+Formula Transformations
+(maximum 500 observations printed)
+
+Variable               Measurement
+  Name       Role         Level            Formula
+
+ _fold_     SEGMENT     INTERVAL      int(ranuni(1))*5+1

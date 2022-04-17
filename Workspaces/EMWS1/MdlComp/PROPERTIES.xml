@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6"
+ ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01"
+ AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" SelectionTable="TRAIN"
+ SelectionCriteria="DEFAULT" SelectionDepth="10" NumberofBins="20" RecomputeAssess="N"
+ TargetName="class" ModelId="Tree" ModelDescription="Decision Tree" ModelCriteria="Valid: Average Profit for class"
+ ForceRun="N" RunAction="Train" Component="ModelCompare" RawCreateTime="1965693303.3"
+ CreateTime="16APR2022:01:55:03" intervalViyaCriteria="DEFAULT" classViyaCriteria="DEFAULT"
+ StatisticUsed="_VAPROF_" TargetLabel="class" RunId="8430d93d-37cc-4c40-b679-f63ac87a2999"
+>
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+EMNOTES
+]]>
+</FILEPROPERTIES><EMTARGETATTRIBUTES/>
+</_ROOT_>

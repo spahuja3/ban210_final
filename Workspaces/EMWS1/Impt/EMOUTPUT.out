@@ -1,0 +1,52 @@
+*------------------------------------------------------------*
+User:                manas
+Date:                April 16, 2022
+Time:                02:21:48 o'clock
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+INPUT      BINARY            3
+INPUT      INTERVAL          4
+INPUT      NOMINAL           5
+TARGET     BINARY            1
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+Imputation Summary
+Number Of Observations
+ 
+                                                                                        Number of
+Variable     Impute       Imputed       Impute             Measurement                    Missing
+  Name       Method      Variable       Value     Role        Level         Label       for TRAIN
+ 
+node_caps    COUNT     IMP_node_caps      no      INPUT      BINARY       node_caps             6
+ 
+ 
+ 
+ 
+Variable Distribution Training Data
+ 
+        Number of
+          Missing    Number of    Percent of
+Obs     for TRAIN    Variables     Variables
+ 
+ 1              6        1            100

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  DefaultMethod="NONE" DefaultTargetMethod="NONE" DefaultClassMethod="NONE" DefaultClassTargetMethod="NONE"
+ Offset="1" MinOffset="Y" HideVariable="Y" RejectVariable="Y" GroupCutoff="0.1" GroupMissing="N"
+ EmRandomSeed="12345" EmSampleSize="DEFAULT" EmSampleMethod="FIRSTN" MissingValue="USEINSEARCH"
+ SummaryVariables="TRANSFORMED" SummaryStatistics="Y" UseMetaTransform="Y" MissingAsLevel="N"
+ NumberofBins="VARIABLES" MaxOptimalBins="4" ForceRun="N" RunAction="Train" Component="Transform"
+ RawCreateTime="1965693833.5" CreateTime="16APR2022:02:03:54" RunId="8b3e820a-1b8a-42d6-ae1a-c6d54858299b"
+ RawLastTimeRun="1965695432.4" RawRunTime="6.003000021" LastTimeRun="16APR2022:02:30:32"
+ RunTime="0 Hr. 0 Min. 6.00 Sec.">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+INTERACTION
+FORMULA
+EDITORCODE
+EMNOTES
+]]>
+</FILEPROPERTIES><EMTARGETATTRIBUTES/>
+</_ROOT_>

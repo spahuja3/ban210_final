@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  NumberOfNeighbors="16" Epsilon="0" Buckets="8" Method="SCAN" Weighted="N" ShowNodes="N"
+ Neighbors="Y" ForceRun="N" RunAction="Train" Component="MBR" RawCreateTime="1965693302.9"
+ CreateTime="16APR2022:01:55:03" RunId="ad23c651-5d4e-4b09-b9d2-3f57333673fb" RawLastTimeRun="1965695215.1"
+ RawRunTime="9.7730000019" LastTimeRun="16APR2022:02:26:55" RunTime="0 Hr. 0 Min. 9.77 Sec."
+>
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+EMNOTES
+]]>
+</FILEPROPERTIES><EMTARGETATTRIBUTES/>
+</_ROOT_>

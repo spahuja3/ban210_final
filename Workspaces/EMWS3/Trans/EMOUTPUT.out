@@ -1,0 +1,39 @@
+*------------------------------------------------------------*
+User:                manas
+Date:                April 16, 2022
+Time:                02:30:38 o'clock
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+INPUT      INTERVAL          4
+INPUT      NOMINAL           8
+TARGET     NOMINAL           1
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+Formula Transformations
+(maximum 500 observations printed)
+ 
+Variable               Measurement
+  Name       Role         Level            Formula
+ 
+ _fold_     SEGMENT     INTERVAL      int(ranuni(1))*5+1
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

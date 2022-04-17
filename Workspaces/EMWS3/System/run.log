@@ -1,0 +1,134 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+Traverser: Traverser invoked.  MPCONNECT command is !sascmdv -nosyntaxcheck -noasynchio -noobjectserver. 
+node.label=EndGrp 
+plen=1 
+node.label=Tree 
+plen=1 
+Traverser: Beginning flow traversal 
+16072      data _null_;
+MPRINT(EM_DIAGRAM):    data _null_;
+16073      file emwipmsg;
+MPRINT(EM_DIAGRAM):   file emwipmsg;
+16074      put '<Node Id="Ids2" Event="Run" Pid="16776" Gridid=""/>';
+MPRINT(EM_DIAGRAM):   put '<Node Id="Ids2" Event="Run" Pid="16776" Gridid=""/>';
+16075      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The file EMWIPMSG is:
+      Local Host Name=DESKTOP-GPKLHDH,
+      Local Host IP addr=fe80::9dee:e6f7:c9c5:74ad%16,
+      Peer Hostname Name=DESKTOP-GPKLHDH,
+      Peer IP addr=127.0.0.1,Peer Name=N/A,
+      Peer Portno=52722,Lrecl=32767,Recfm=Variable
+
+NOTE: 1 record was written to the file EMWIPMSG.
+      The minimum record length was 51.
+      The maximum record length was 51.
+NOTE: DATA statement used (Total process time):
+      real time           0.06 seconds
+      cpu time            0.01 seconds
+      
+
+16076      %let emloopmode =;
+*------------------------------------------------------------* 
+* 
+* Ids2 : Beginning update before running 
+* datetime : 16APR2022:02:30:27 
+* 
+*------------------------------------------------------------* 
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+MPRINT(EM_DIAGRAM):     filename _emtool_ 'D:\\127097210_Pahuja\Workspaces\EMWS3\Ids2\PROPERTIES.xml' encoding="UTF-8" NOBOM;
+16078      %let _HPDMGRIDHOST=;
+16079      %let _HPDMGRIDINSTALLLOC=;
+16080      %let _HPDMGRIDDATASERVER=;
+16081      %hpdm_gridSetOPtions;
+MPRINT(EM_DIAGRAM):   
+MPRINT(HPDM_GRIDSETOPTIONS):   data _null_;
+MPRINT(HPDM_GRIDSETOPTIONS):   length optionString string $2000;
+MPRINT(HPDM_GRIDSETOPTIONS):   optionString = reverse(getoption('SET'));
+MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDHOST'));
+MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
+MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
+MPRINT(HPDM_GRIDSETOPTIONS):   host = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
+MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDHOST', strip(host));
+MPRINT(HPDM_GRIDSETOPTIONS):   end;
+MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDINSTALLLOC'));
+MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
+MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
+MPRINT(HPDM_GRIDSETOPTIONS):   install = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
+MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDINSTALLLOC', strip(install));
+MPRINT(HPDM_GRIDSETOPTIONS):   end;
+MPRINT(HPDM_GRIDSETOPTIONS):   index = index(optionString, reverse('GRIDDATASERVER'));
+MPRINT(HPDM_GRIDSETOPTIONS):   if index then do;
+MPRINT(HPDM_GRIDSETOPTIONS):   string = reverse(substr(optionString, 1, index-4));
+MPRINT(HPDM_GRIDSETOPTIONS):   server = '"'!!strip(tranwrd(scan(string, 1, ']'), '"', ''))!!'"';
+MPRINT(HPDM_GRIDSETOPTIONS):   call symput('_HPDMGRIDDATASERVER', strip(server));
+MPRINT(HPDM_GRIDSETOPTIONS):   end;
+MPRINT(HPDM_GRIDSETOPTIONS):   run;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(EM_DIAGRAM):  ;
+
+*------------------------------------------------------------* 
+* 
+* Ids2 : End update 
+* datetime : 16APR2022:02:30:27 
+* 
+*------------------------------------------------------------* 
+16082      %em_getactionstatus(emlib =EMWS3, nodeid=Ids2);
+MPRINT(EM_DIAGRAM):   
+MPRINT(EM_GETACTIONSTATUS):   proc display c=sashelp.emutil.getactionstatus.scl;
+MPRINT(EM_GETACTIONSTATUS):   run;
+
+16083      %let em_Train = Y;
+16084      %let em_Report = Y;
+16085      %let em_Score = Y;
+16086      %let em_Run = Y;
+NOTE: PROCEDURE DISPLAY used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(EM_GETACTIONSTATUS):   
+MPRINT(EM_DIAGRAM):  ;
+
+16087      %let emloopmode =;
+16088      %let emloopnumber =0;
+16089      %let emloopId =Ids2;
+*------------------------------------------------------------* 
+* 
+* Ids2 : Running 
+* datetime : 16APR2022:02:30:27 
+* 
+*------------------------------------------------------------* 
+16090      %let SYSCC =0;
+16091      %let EMGROUPMODE =;
+16092      %let EMGROUPID =;
+MPRINT(EM_DIAGRAM):      filename temp catalog 'sashelp.emutil.em_vardist.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_classdist.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_checksetinit.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_checkerror.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_odsliston.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_odslistoff.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emutil.em_getvarname.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):   filename temp catalog 'sashelp.emassmt.em_assess.source';
+MPRINT(EM_DIAGRAM):   filename temp;
+MPRINT(EM_DIAGRAM):    filename L2PTWD0H "D:\\127097210_Pahuja\Workspaces\EMWS3\Ids2\EMTRAIN.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto log=L2PTWD0H new;
+MPRINT(EM_DIAGRAM):   run;

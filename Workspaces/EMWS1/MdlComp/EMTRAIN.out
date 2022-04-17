@@ -1,0 +1,144 @@
+ 
+                                                                                               
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+ Role        Level         Count
+
+TARGET      BINARY           1    
+ 
+                                                                                               
+ 
+ 
+
+
+
+
+
+
+
+Fit Statistics
+Model Selection based on Valid: Average Profit for class (_VAPROF_)
+
+                                 Valid:    Train:                    Valid:
+                                 Average  Average       Train:      Average       Valid:
+Selected Model  Model          Profit for Squared Misclassification Squared Misclassification
+ Model   Node   Description       class    Error         Rate        Error         Rate
+
+   Y     Tree   Decision Tree    0.79661  0.17915      0.24670      0.16932      0.20339     
+         Neural Neural Network   0.74576  0.11430      0.15859      0.18804      0.25424     
+         MBR    MBR               .       0.18151      0.26872      0.22338      0.30508     
+ 
+                                                                                               
+ 
+ 
+
+
+
+
+
+
+
+Fit Statistics Table
+Target: class
+
+Data Role=Train
+
+Statistics                                                           Tree     Neural        MBR
+
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff      0.405      0.451      0.344
+Train: Kolmogorov-Smirnov Statistic                                 0.331      0.614      0.301
+Train: Akaike's Information Criterion                                .       381.700    241.613
+Train: Average Profit for class                                     0.753      0.841       .   
+Train: Average Squared Error                                        0.179      0.114      0.182
+Train: Roc Index                                                    0.681      0.890      0.723
+Train: Average Error Function                                        .         0.361      0.532
+Train: Cumulative Percent Captured Response                        24.157     34.328     18.770
+Train: Percent Captured Response                                   11.553     16.418      6.531
+Selection Criterion: Valid: Average Profit for class                0.797      0.746       .   
+Train: Degrees of Freedom for Error                                  .       118.000    227.000
+Train: Model Degrees of Freedom                                      .       109.000      0.000
+Train: Total Degrees of Freedom                                   227.000    227.000    227.000
+Train: Divisor for ASE                                            454.000    454.000    454.000
+Train: Error Function                                                .       163.700    241.613
+Train: Final Prediction Error                                        .         0.325      0.182
+Train: Gain                                                       138.419    238.806     85.250
+Train: Gini Coefficient                                             0.363      0.780      0.445
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Statistic               0.331      0.585      0.301
+Train: Kolmogorov-Smirnov Probability Cutoff                        0.200      0.470      0.320
+Train: Cumulative Lift                                              2.384      3.388      1.852
+Train: Lift                                                         2.384      3.388      1.348
+Train: Maximum Absolute Error                                       0.804      0.872      0.813
+Train: Misclassification Rate                                       0.247      0.159      0.269
+Train: Mean Squared Error                                            .         0.220      0.182
+Train: Sum of Frequencies                                         227.000    227.000    227.000
+Train: Number of Estimated Weights                                   .       109.000      0.000
+Train: Total Profit for class                                     171.000    191.000       .   
+Train: Root Average Squared Error                                   0.423      0.338      0.426
+Train: Cumulative Percent Response                                 70.370    100.000     54.677
+Train: Percent Response                                            70.370    100.000     39.780
+Train: Root Final Prediction Error                                   .         0.571      0.426
+Train: Root Mean Squared Error                                       .         0.469      0.426
+Train: Schwarz's Bayesian Criterion                                  .       755.020    241.613
+Train: Sum of Squared Errors                                       81.333     51.894     82.406
+Train: Sum of Case Weights Times Freq                                .       454.000    454.000
+Train: Number of Wrong Classifications                               .        36.000     61.000
+
+
+Data Role=Valid
+
+Statistics                                                           Tree     Neural        MBR
+
+Valid: Kolmogorov-Smirnov Statistic                                 0.396      0.402      0.146
+Valid: Average Profit for class                                     0.797      0.746       .   
+Valid: Average Squared Error                                        0.169      0.188      0.223
+Valid: Roc Index                                                    0.690      0.709      0.514
+Valid: Average Error Function                                        .         0.589      0.634
+Valid: Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff      0.554      0.357      0.125
+Valid: Cumulative Percent Captured Response                        26.667     22.222     10.101
+Valid: Percent Captured Response                                   13.333      5.556      4.545
+Valid: Divisor for VASE                                           118.000    118.000    118.000
+Valid: Error Function                                                .        69.444     74.794
+Valid: Gain                                                       162.222    118.519      0.673
+Valid: Gini Coefficient                                             0.381      0.417      0.027
+Valid: Bin-Based Two-Way Kolmogorov-Smirnov Statistic               0.374      0.354      0.131
+Valid: Kolmogorov-Smirnov Probability Cutoff                        0.410      0.350      0.010
+Valid: Cumulative Lift                                              2.622      2.185      0.993
+Valid: Lift                                                         2.622      1.093      0.894
+Valid: Maximum Absolute Error                                       0.804      0.990      0.875
+Valid: Misclassification Rate                                       0.203      0.254      0.305
+Valid: Mean Squared Error                                            .         0.188      0.223
+Valid: Sum of Frequencies                                          59.000     59.000     59.000
+Valid: Total Profit for class                                      47.000     44.000       .   
+Valid: Root Average Squared Error                                   0.411      0.434      0.473
+Valid: Cumulative Percent Response                                 80.000     66.667     30.303
+Valid: Percent Response                                            80.000     33.333     27.273
+Valid: Root Mean Squared Error                                       .         0.434      0.473
+Valid: Sum of Squared Errors                                       19.980     22.189     26.359
+Valid: Sum of Case Weights Times Freq                                .       118.000    118.000
+Valid: Number of Wrong Classifications                               .        15.000     18.000
+ 
+                                                                                               
+ 
+ 
+
+
+
+
+
+
+
+Event Classification Table
+Model Selection based on Valid: Average Profit for class (_VAPROF_)
+
+Model   Model           Data              Target    False     True      False     True
+Node    Description     Role      Target  Label   Negative  Negative  Positive  Positive
+
+Tree    Decision Tree   TRAIN     class   class      48        152        8        19   
+Tree    Decision Tree   VALIDATE  class   class      10         39        2         8   
+Neural  Neural Network  TRAIN     class   class      25        149       11        42   
+Neural  Neural Network  VALIDATE  class   class      12         38        3         6   
+MBR     MBR             TRAIN     class   class      60        159        1         7   
+MBR     MBR             VALIDATE  class   class      18         41        .         .   

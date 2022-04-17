@@ -1,0 +1,37 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+1 
+Traverser: Traverser invoked.  MPCONNECT command is sas. 
+Traverser: Beginning flow traversal 
+*------------------------------------------------------------* 
+* 
+* Ids2 : Beginning Update 
+* datetime : 16APR2022:02:30:09 
+* 
+*------------------------------------------------------------* 
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+13650      %let _HPDMGRIDHOST=;
+13651      %let _HPDMGRIDINSTALLLOC=;
+13652      %let _HPDMGRIDDATASERVER=;
+13653      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Ids2 : End Update 
+* datetime : 16APR2022:02:30:09 
+* 
+*------------------------------------------------------------* 
+Traverser: Run Completed 
+13654      proc printto;
+13655      run;
+

@@ -1,0 +1,112 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+1 
+Traverser: Traverser invoked.  MPCONNECT command is sas. 
+Traverser: Beginning flow traversal 
+*------------------------------------------------------------* 
+* 
+* Ids : Beginning Update 
+* datetime : 16APR2022:01:58:32 
+* 
+*------------------------------------------------------------* 
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+11379      %let _HPDMGRIDHOST=;
+11380      %let _HPDMGRIDINSTALLLOC=;
+11381      %let _HPDMGRIDDATASERVER=;
+11382      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Ids : End Update 
+* datetime : 16APR2022:01:58:32 
+* 
+*------------------------------------------------------------* 
+Traverser: WaitingNode "IMPT" 
+Traverser: WaitingNode "MBR" 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* Part : Beginning Update 
+* datetime : 16APR2022:01:58:33 
+* 
+*------------------------------------------------------------* 
+11401      %let _HPDMGRIDHOST=;
+11402      %let _HPDMGRIDINSTALLLOC=;
+11403      %let _HPDMGRIDDATASERVER=;
+11404      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Part : End Update 
+* datetime : 16APR2022:01:58:33 
+* 
+*------------------------------------------------------------* 
+Traverser: WaitingNode "MBR" 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* Impt : Beginning Update 
+* datetime : 16APR2022:01:58:34 
+* 
+*------------------------------------------------------------* 
+11424      %let _HPDMGRIDHOST=;
+11425      %let _HPDMGRIDINSTALLLOC=;
+11426      %let _HPDMGRIDDATASERVER=;
+11427      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Impt : End Update 
+* datetime : 16APR2022:01:58:34 
+* 
+*------------------------------------------------------------* 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* MBR : Beginning Update 
+* datetime : 16APR2022:01:58:34 
+* 
+*------------------------------------------------------------* 
+11447      %let _HPDMGRIDHOST=;
+11448      %let _HPDMGRIDINSTALLLOC=;
+11449      %let _HPDMGRIDDATASERVER=;
+11450      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* MBR : End Update 
+* datetime : 16APR2022:01:58:34 
+* 
+*------------------------------------------------------------* 
+Traverser: Run Completed 
+11451      proc printto;
+11452      run;
+

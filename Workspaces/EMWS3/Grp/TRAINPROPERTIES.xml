@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  Location="CATALOG" Catalog="SASHELP.EMUTIL.GP.SOURCE" ForceRun="N" TargetGroup="N"
+ Mode="CROSSVALIDATION" SizeType="PERCENT" SizePercent="10.0" SizeObs="." RandomSeed="12345"
+ MinimumObs="10" IndexCount="10" RunAction="Train" Component="StartGroup" DataNeeded="Y"
+ RawCreateTime="1965693831.8" CreateTime="16APR2022:02:03:52" RunId="a53ae0e1-e8b3-4780-ab03-b92260c9a8fa"
+ RawLastTimeRun="1965695439" RawRunTime="4.2309999466" LastTimeRun="16APR2022:02:30:39"
+ RunTime="0 Hr. 0 Min. 4.23 Sec.">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES ><![CDATA[
+USERTRAINCODE
+USERSCORECODE
+USERREPORTCODE
+EMNOTES
+]]>
+</FILEPROPERTIES><EMTARGETATTRIBUTES/>
+</_ROOT_>

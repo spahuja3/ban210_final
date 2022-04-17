@@ -1,0 +1,144 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+1 
+Traverser: Traverser invoked.  MPCONNECT command is sas. 
+Traverser: Beginning flow traversal 
+*------------------------------------------------------------* 
+* 
+* Ids : Beginning Update 
+* datetime : 16APR2022:02:16:21 
+* 
+*------------------------------------------------------------* 
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+10974      *------------------------------------------------------------*;
+10975      * Ids: Update Variables Set;
+10976      *------------------------------------------------------------*;
+
+10977      data EMWS4.Ids_VariableSet;
+10978      length ROLE $32;
+10979      length LEVEL $10;
+10980      length REPORT $1;
+10981      label REPORT = "Report";
+10982      length ORDER $8;
+10983      length DROP $1;
+10984      length LOWERLIMIT 8;
+10985      length UPPERLIMIT 8;
+10986      set EMWS4.Ids_EMCMETADEFAULT;
+10987      run;
+
+NOTE: Variable DROP is uninitialized.
+NOTE: There were 13 observations read from the data set EMWS4.IDS_EMCMETADEFAULT.
+NOTE: The data set EMWS4.IDS_VARIABLESET has 13 observations and 21 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.01 seconds
+      
+
+10988      data EMWS4.Ids_VariableSet;
+10989      set EMWS4.Ids_VariableSet;
+10990      if upcase(NAME) = 'AVGAGE' then do;
+10991      LEVEL = 'ORDINAL';
+10992      end;
+10993      if upcase(NAME) = 'AVGINV_NODE_GROUP' then do;
+10994      LEVEL = 'ORDINAL';
+10995      end;
+10996      if upcase(NAME) = 'AVGTUMORSIZE' then do;
+10997      LEVEL = 'ORDINAL';
+10998      end;
+10999      if upcase(NAME) = 'BREAST' then do;
+11000      LEVEL = 'BINARY';
+11001      end;
+11002      if upcase(NAME) = 'CLASS' then do;
+11003      LEVEL = 'BINARY';
+11004      ROLE = 'TARGET';
+11005      end;
+11006      if upcase(NAME) = 'DEG_MALIG' then do;
+11007      LEVEL = 'ORDINAL';
+11008      end;
+11009      if upcase(NAME) = 'IRRADIAT' then do;
+11010      LEVEL = 'BINARY';
+11011      end;
+11012      if upcase(NAME) = 'NODE_CAPS' then do;
+11013      LEVEL = 'BINARY';
+11014      end;
+11015      run;
+
+NOTE: There were 13 observations read from the data set EMWS4.IDS_VARIABLESET.
+NOTE: The data set EMWS4.IDS_VARIABLESET has 13 observations and 21 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.03 seconds
+      cpu time            0.06 seconds
+      
+
+11016      * Ids: End of Update Variables Set;
+11017      *------------------------------------------------------------*;
+
+11018      *------------------------------------------------------------*;
+11019      * Ids: Computing metadata for DATA data;
+11020      *------------------------------------------------------------*;
+
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+11030      data EMWS4.Ids_EMINFO;
+11031      length TARGET KEY $32 DATA $43;
+11032      TARGET="";
+11033      KEY="IDSTABLE";
+11034      DATA="BAN210.EBREASTCANCER";
+11035      output;
+11036      TARGET="class";
+11037      KEY="DECDATA";
+11038      DATA="EMWS4.Ids_class_DD";
+11039      output;
+11040      TARGET="class";
+11041      KEY="DECMETA";
+11042      DATA="EMWS4.Ids_class_DM";
+11043      output;
+11044      run;
+
+NOTE: The data set EMWS4.IDS_EMINFO has 3 observations and 3 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.01 seconds
+      
+
+11045      data EMWS4.Ids_CMeta_DATA;
+11046      set EMWS4.Ids_VariableSet;
+11047      drop DROP;
+11048      where DROP='N';
+11049      run;
+
+NOTE: There were 13 observations read from the data set EMWS4.IDS_VARIABLESET.
+      WHERE DROP='N';
+NOTE: The data set EMWS4.IDS_CMETA_DATA has 13 observations and 20 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.04 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file BAN210.EBREASTCANCER.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+11051      %let _HPDMGRIDHOST=;
+11052      %let _HPDMGRIDINSTALLLOC=;
+11053      %let _HPDMGRIDDATASERVER=;
+11054      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.04 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Ids : End Update 
+* datetime : 16APR2022:02:16:22 
+* 
+*------------------------------------------------------------* 
+Traverser: Run Completed 
+11055      proc printto;
+11056      run;
+

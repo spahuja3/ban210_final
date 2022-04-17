@@ -1,0 +1,1 @@
+#%exception.server.USEATLEAST1INPUTREJECT

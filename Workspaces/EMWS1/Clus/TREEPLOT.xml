@@ -1,0 +1,301 @@
+﻿<SASReport version="1.0">
+      <Data>
+            <IQData type="2DEmbedded" name="TreeData">
+                  <EmbeddedData>
+                        <Variables>
+                              <Variable name="Var1" varName="Var1" type="String" />
+                              <Variable name="Var2" varName="Var2" type="String" />
+                              <Variable name="Var3" varName="Var3" type="Numeric" />
+                              <Variable name="Var4" varName="Var4" type="Numeric" />
+                              <Variable name="Var5" varName="Var5" type="Numeric" />
+                              <Variable name="Var6" varName="Var6" type="Numeric" />
+                              <Variable name="Var7" varName="Var7" type="String"  />
+                              <Variable name="Var8" varName="Var8" type="String" />
+                              <Variable name="Var9" varName="Var9" type="Numeric" />
+                        </Variables>
+                        <ValuesList>
+    <Values>
+      <Value>Non-Missing Values</Value>
+      <Value>Avginv_node_group</Value>
+      <Value>10</Value>
+      <Value>34.36</Value>
+      <Value>1</Value>
+      <Value>0</Value>
+      <Value>Statistic           Train     Validation
+4:                  34.4%
+Count:                227              .</Value>
+      <Value>Node Id:            1&#10;Statistic           Train     Validation&#10;1:                   6.2%&#10;2:                   3.5%&#10;3:                  13.2%&#10;4:
+ 34.4%&#10;5:                  33.0%&#10;6:                   7.5%&#10;7:                   2.2%&#10;Count:                227              .</Value>
+      <Value>227</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 11.5 Or Missing</Value>
+      <Value>Imputed: node_caps</Value>
+      <Value>9.6475770925</Value>
+      <Value>35.62</Value>
+      <Value>2</Value>
+      <Value>1</Value>
+      <Value>Statistic           Train     Validation
+4:                  35.6%
+Count:                219              .</Value>
+      <Value>Node Id:            2&#10;Statistic           Train     Validation&#10;1:                   6.4%&#10;2:                   0.0%&#10;3:                  13.7%&#10;4:
+ 35.6%&#10;5:                  34.2%&#10;6:                   7.8%&#10;7:                   2.3%&#10;Count:                219              .</Value>
+      <Value>219</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 11.5</Value>
+      <Value></Value>
+      <Value>0.3524229075</Value>
+      <Value>100</Value>
+      <Value>3</Value>
+      <Value>1</Value>
+      <Value>Statistic           Train     Validation
+2:                 100.0%
+Count:                  8              .</Value>
+      <Value>Node Id:            3&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                 100.0%&#10;3:                   0.0%&#10;4:
+ 0.0%&#10;5:                   0.0%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                  8              .</Value>
+      <Value>8</Value>
+    </Values>
+    <Values>
+      <Value>NO Or Missing</Value>
+      <Value>irradiat</Value>
+      <Value>8.0616740088</Value>
+      <Value>42.62</Value>
+      <Value>4</Value>
+      <Value>2</Value>
+      <Value>Statistic           Train     Validation
+4:                  42.6%
+Count:                183              .</Value>
+      <Value>Node Id:            4&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                   0.0%&#10;3:                  16.4%&#10;4:
+ 42.6%&#10;5:                  41.0%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                183              .</Value>
+      <Value>183</Value>
+    </Values>
+    <Values>
+      <Value>YES</Value>
+      <Value>AvgTumorSize</Value>
+      <Value>1.5859030837</Value>
+      <Value>47.22</Value>
+      <Value>5</Value>
+      <Value>2</Value>
+      <Value>Statistic           Train     Validation
+6:                  47.2%
+Count:                 36              .</Value>
+      <Value>Node Id:            5&#10;Statistic           Train     Validation&#10;1:                  38.9%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 0.0%&#10;5:                   0.0%&#10;6:                  47.2%&#10;7:                  13.9%&#10;Count:                 36              .</Value>
+      <Value>36</Value>
+    </Values>
+    <Values>
+      <Value>NO Or Missing</Value>
+      <Value>AvgTumorSize</Value>
+      <Value>6.6960352423</Value>
+      <Value>51.32</Value>
+      <Value>6</Value>
+      <Value>4</Value>
+      <Value>Statistic           Train     Validation
+4:                  51.3%
+Count:                152              .</Value>
+      <Value>Node Id:            6&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 51.3%&#10;5:                  48.7%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                152              .</Value>
+      <Value>152</Value>
+    </Values>
+    <Values>
+      <Value>YES</Value>
+      <Value></Value>
+      <Value>1.3656387665</Value>
+      <Value>96.77</Value>
+      <Value>7</Value>
+      <Value>4</Value>
+      <Value>Statistic           Train     Validation
+3:                  96.8%
+Count:                 31              .</Value>
+      <Value>Node Id:            7&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                   0.0%&#10;3:                  96.8%&#10;4:
+ 0.0%&#10;5:                   3.2%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                 31              .</Value>
+      <Value>31</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 34.5 Or Missing</Value>
+      <Value></Value>
+      <Value>1.0572687225</Value>
+      <Value>70.83</Value>
+      <Value>8</Value>
+      <Value>5</Value>
+      <Value>Statistic           Train     Validation
+6:                  70.8%
+Count:                 24              .</Value>
+      <Value>Node Id:            8&#10;Statistic           Train     Validation&#10;1:                  29.2%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 0.0%&#10;5:                   0.0%&#10;6:                  70.8%&#10;7:                   0.0%&#10;Count:                 24              .</Value>
+      <Value>24</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 34.5</Value>
+      <Value></Value>
+      <Value>0.5286343612</Value>
+      <Value>58.33</Value>
+      <Value>9</Value>
+      <Value>5</Value>
+      <Value>Statistic           Train     Validation
+1:                  58.3%
+Count:                 12              .</Value>
+      <Value>Node Id:            9&#10;Statistic           Train     Validation&#10;1:                  58.3%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 0.0%&#10;5:                   0.0%&#10;6:                   0.0%&#10;7:                  41.7%&#10;Count:                 12              .</Value>
+      <Value>12</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 24.5 Or Missing</Value>
+      <Value>deg_malig</Value>
+      <Value>3.3920704846</Value>
+      <Value>88.31</Value>
+      <Value>10</Value>
+      <Value>6</Value>
+      <Value>Statistic           Train     Validation
+5:                  88.3%
+Count:                 77              .</Value>
+      <Value>Node Id:           10&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 11.7%&#10;5:                  88.3%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                 77              .</Value>
+      <Value>77</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 24.5</Value>
+      <Value></Value>
+      <Value>3.3039647577</Value>
+      <Value>92</Value>
+      <Value>11</Value>
+      <Value>6</Value>
+      <Value>Statistic           Train     Validation
+4:                  92.0%
+Count:                 75              .</Value>
+      <Value>Node Id:           11&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 92.0%&#10;5:                   8.0%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                 75              .</Value>
+      <Value>75</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 2.5 Or Missing</Value>
+      <Value></Value>
+      <Value>2.9515418502</Value>
+      <Value>100</Value>
+      <Value>12</Value>
+      <Value>10</Value>
+      <Value>Statistic           Train     Validation
+5:                 100.0%
+Count:                 67              .</Value>
+      <Value>Node Id:           12&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 0.0%&#10;5:                 100.0%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                 67              .</Value>
+      <Value>67</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 2.5</Value>
+      <Value></Value>
+      <Value>0.4405286344</Value>
+      <Value>90</Value>
+      <Value>13</Value>
+      <Value>10</Value>
+      <Value>Statistic           Train     Validation
+4:                  90.0%
+Count:                 10              .</Value>
+      <Value>Node Id:           13&#10;Statistic           Train     Validation&#10;1:                   0.0%&#10;2:                   0.0%&#10;3:                   0.0%&#10;4:
+ 90.0%&#10;5:                  10.0%&#10;6:                   0.0%&#10;7:                   0.0%&#10;Count:                 10              .</Value>
+      <Value>10</Value>
+    </Values>
+                        </ValuesList>
+                  </EmbeddedData>
+            </IQData>
+      </Data>
+
+      <View>
+            <Section>
+                  <Body>
+                        <Graph name="DecisionTree" >
+                              <ChartDataList>
+                                    <ChartData name="DTreeData" data="TreeData" >
+                                          <Roles>
+                                                <Role type="AboveText"   variable="Var1" > </Role>
+                                                <Role type="BelowText"   variable="Var2" > </Role>
+                                                <Role type="LinkWidth"   variable="Var3" > </Role>
+                                                <Role type="NodeColor"   variable="Var4" > </Role>
+                                                <Role type="ID"      variable="Var5" > </Role>
+                                                <Role type="Parent"    variable="Var6" > </Role>
+                                                <Role type="NodeText"    variable="Var7" > </Role>
+                                                <Role type="ToolTipText" variable="Var8" > </Role>
+                                                <Role type="NodeSize"    variable="Var9" > </Role>
+                                          </Roles>
+                                    </ChartData>
+                              </ChartDataList>
+                              <ColorMappers>
+                                    <ColorRamp  name="NodeColorRamp"
+                                                      underFlowColor="Red"
+                                                      overflowColor="Green"
+                                                      low="0"
+                                                      high="1000"
+                                                      beginColor="CX0000FF"
+                                                      endColor="CXFFFFFF" >
+                                    </ColorRamp>
+                                    <ColorRamp  name="LinkColorRamp"
+                                                      low="1"
+                                                      high="10"
+                                                      beginColor="CX000000"
+                                                      endColor="CX000000" >
+                                    </ColorRamp>
+                              </ColorMappers>
+                              <ChartAreas>
+                                    <ChartArea>
+                                          <Charts>
+                                          <DecisionTree name="DTree"
+                                                  chartData="DTreeData"
+                                                  selectionColor="CX00FF00"
+                                                  orientation="Vertical"
+                                                  emptyNodes="False"
+                                                  legendVisible="False"
+                                                  titleAnchor="Root"
+                                                  footnoteAnchor="Chart"
+                                                  displayDepth="4" >
+
+                                    <SplitVarList>
+                                          <SplitVar name="SPLIT VAR A" type="DISCRETE" missingBranch="3" values="1,A:1,B:2,C:3,D"/>
+                                          <SplitVar name="SPLIT VAR B" type="CONTINUOUS" breaks="10:50:100" />
+                                    </SplitVarList>
+
+                                    <IciclePlot isVisible="True"></IciclePlot>
+
+                                    <NodeStyle colorMapper="NodeColorRamp"
+                                                   outlineColor="Black"
+                                                   outlineWidth="1">
+                                          <NodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Bold" />
+                                    </NodeStyle>
+                                    <FlaggedNodeStyle color="CXFF8844"
+                                                              outlineColor="Black"
+                                                              outlineWidth="3" >
+                                          <FlaggedNodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Italic" />
+                                    </FlaggedNodeStyle>
+                                    <LinkStyle textVisible="True"
+                                                   colorMapper="LinkColorRamp"
+                                                   linkStyle="Manhattan"
+                                                   staticWidth="3" >
+                                          <LinkText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="10 pt"
+                                                        textFlags="Bold" />
+                                    </LinkStyle>
+                                    <GraphStyle numBars="3"
+                                                      numStacks="3"
+                                                      axisMin="0"
+                                                      axisMax="20"
+                                                      orientation="Vertical"
+                                                      visible="True" >
+                                    </GraphStyle>
+                              </DecisionTree>
+                              </Charts>
+                        </ChartArea>
+                  </ChartAreas>
+            </Graph>
+      </Body>
+      </Section>
+      </View>
+
+  </SASReport>
+
